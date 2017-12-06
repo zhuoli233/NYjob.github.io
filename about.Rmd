@@ -1,0 +1,11 @@
+---
+title: "Know more about us"
+output: html_document
+---
+#Group member
+Huilin Zhou (hz2507)  
+Zhuo Li (zl2637)  
+Qing Xu (qx2178)  
+Zhaoyu Liu (zl2638) 
+
+#What challenge did we meet?

@@ -1,0 +1,183 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(haven)
+library(readxl)
+library(janitor)
+library(ggmap)
+library(plotly)
+library(stringr)
+library(wordcloud2)
+library(tidytext)
+library(forcats)
+library(viridis)
+library(ggplot2)
+```
+-----------------------------------------------------------------------
+```{r}
+nyc_jobs=read_csv("job.csv")
+
+
+```
+
+Row {.tabset data-height=600}
+-----------------------------------------------------------------------
+###Location map
+
+```{r}
+# plotly worldwild
+Sys.setenv('MAPBOX_TOKEN' = 'pk.eyJ1IjoieHVxaW5nc2FsbHkiLCJhIjoiY2phZWh0djdyMHUzZTJ3bGR3MHFsdmIzZSJ9.vhYtu7zeAAuX6slhdDj6lA')
+
+plot_mapbox(nyc_jobs,lat = ~lat, lon = ~lon,
+              size=2,
+              split = nyc_jobs$job_category,
+              mode = 'scattermapbox') %>%
+  add_markers(
+    text = ~text_label,
+    color = ~job_category,size = I(9)) %>%
+  layout(title = 'Work Location',
+         font = list(color='white'),
+         plot_bgcolor = '#191A1A', paper_bgcolor = '#191A1A',
+         mapbox = list(style = 'dark'),
+         legend = list(orientation = 'h',
+                       font = list(size = 8)),
+         margin = list(l = 25, r = 25,
+                       b = 25, t = 25,
+                       pad = 2))
+
+```
+
+Row {data-height=400}}
+-----------------------------------------------------------------------
+
+### Distribution of salary in different job category
+
+```{r}
+v<- ggplot(nyc_jobs,aes(x = job_category, y = salary_mean))+
+     geom_violin(aes(fill = job_category), alpha = .5)+
+     labs(title = "Annual average salary distribution in 12 job categories")+
+     theme(axis.text.x = element_text(angle = 90, hjust = 1))
+ggplotly(v)
+```
+
+### Bar plot of job category vs. number of positions of each year.
+
+```{r}
+positions_plot = nyc_jobs %>%
+  select(x_of_positions, agency, job_category, salary_mean, posting_date) %>%
+  distinct() %>%
+  separate(posting_date, into = c("year", "month", "day"), sep = "-") %>%
+  select(-month, -day) %>%
+  group_by(job_category, year) %>%
+  summarise(positions = sum(x_of_positions))
+
+# Make a bar plot of job category vs. number of positions of each year
+plot_ly(positions_plot, x = ~job_category, y = ~positions,
+        color = ~year, type = "bar") %>%
+  layout(title = "Number of positions of job categories in each year",
+         barmode = "group")
+```
+
+```{r}
+# Job category with different educational requirement and base salary
+job_data = nyc_jobs %>%
+  select(job_category, salary_range_from, salary_range_to,
+         minimum_qual_requirements, full_time_part_time_indicator,
+         salary_frequency) %>%
+  filter(job_category!= " ", minimum_qual_requirements!=" ",
+         full_time_part_time_indicator == "F", salary_frequency == "Annual")
+
+#select the different data according to the matching key words and avoid repetition
+x = c("baccalaureate", "Bachelor")
+y = c("Master", "master")
+
+master_data = filter(job_data, grepl(paste(y, collapse = "|"), minimum_qual_requirements),
+                     !grepl(paste(x, collapse = "|"), minimum_qual_requirements))
+  
+
+baccalaureate_data = filter(job_data, grepl(paste(x, collapse = "|"), minimum_qual_requirements),
+                            !grepl(paste(y, collapse = "|"), minimum_qual_requirements))
+
+Other_data = filter(job_data, !grepl(paste(y, collapse = "|"), minimum_qual_requirements),
+                    !grepl(paste(x, collapse = "|"), minimum_qual_requirements))
+```
+
+
+### Boxplots of salary for different educational requirement.
+
+```{r}
+plot_ly(master_data, y = ~salary_range_from, color = ~job_category, type = "box", colors = "Set2") %>%
+
+layout(title = "Base salary of jobs required at least master degree")
+
+plot_ly(baccalaureate_data, y = ~salary_range_from, color = ~job_category, type = "box", colors = "Set2") %>%
+  layout(title = "Base salary of jobs required baccalaureate degree(No need master)")
+  
+plot_ly(Other_data, y = ~salary_range_from, color = ~job_category, type = "box",
+          colors = "Set2") %>%
+  layout(title = "Base salary of different kind of jobs without requirement of degree")
+
+```
+
+
+
+
+## Wordcount analysis of Preffered Skills and Minimum Qual Requirements
+
+```{r}
+#change class of the variables
+nyc_jobs = nyc_jobs%>% 
+  ungroup()%>%
+  mutate(minimum_qual_requirements = as.character(minimum_qual_requirements))%>%
+  mutate(preferred_skills = as.character(preferred_skills))
+
+#seperate into words and count the word
+jobs_words_skill =  nyc_jobs%>%
+  unnest_tokens(word,preferred_skills)%>%
+  anti_join(stop_words)%>%
+  inner_join(., parts_of_speech) %>%
+  count(word, sort = TRUE)
+jobs_words_requirement =  nyc_jobs%>%
+  unnest_tokens(word,minimum_qual_requirements)%>%
+  anti_join(stop_words)%>%
+  inner_join(., parts_of_speech) %>%
+  count(word, sort = TRUE)
+
+#rank the word counts
+jobs_words_skill %>% 
+  top_n(20) %>% 
+  mutate(word = fct_reorder(word, n)) %>% 
+  plot_ly(y = ~word, x = ~n, color = ~word, type = "bar")%>%
+  layout(title = "Preferred Skills Word Counts")
+
+jobs_words_requirement %>% 
+  top_n(20) %>% 
+  mutate(word = fct_reorder(word, n)) %>% 
+  plot_ly(y = ~word, x = ~n, color = ~word, type = "bar")%>%
+  layout(title = "Minimum Qual Requirements")
+```
+
+
+
+## Word Cloud of Preffered Skills and Minimum Qual Requirements
+The word count can be showed as two word clouds.  
+```{r}
+set.seed(123)
+wordcloud2(jobs_words_skill, size = 2,color = 'random-light',  
+           backgroundColor = "gray", fontWeight='bold',  
+           minRotation = -pi/3, maxRotation = pi/3,rotateRatio = 0.8)  
+wordcloud2(jobs_words_requirement, size = 2,color = 'random-light',  
+           backgroundColor = "gray", fontWeight='bold',  
+           minRotation = -pi/3, maxRotation = pi/3,rotateRatio = 0.8)  
+```
+
+
