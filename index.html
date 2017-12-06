@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+
+<title>Find a proper job in NYC – Job analysis of NYC</title>
+
+<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/bootstrap.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
+<link href="site_libs/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+
+<style type="text/css">code{white-space: pre;}</style>
+<style type="text/css">
+  pre:not([class]) {
+    background-color: white;
+  }
+</style>
+<script type="text/javascript">
+if (window.hljs && document.readyState && document.readyState === "complete") {
+   window.setTimeout(function() {
+      hljs.initHighlighting();
+   }, 0);
+}
+</script>
+
+
+
+<style type="text/css">
+h1 {
+  font-size: 34px;
+}
+h1.title {
+  font-size: 38px;
+}
+h2 {
+  font-size: 30px;
+}
+h3 {
+  font-size: 24px;
+}
+h4 {
+  font-size: 18px;
+}
+h5 {
+  font-size: 16px;
+}
+h6 {
+  font-size: 12px;
+}
+.table th:not([align]) {
+  text-align: left;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+code {
+  color: inherit;
+  background-color: rgba(0, 0, 0, 0.04);
+}
+img {
+  max-width:100%;
+  height: auto;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+</style>
+
+
+<style type="text/css">
+/* padding for bootstrap navbar */
+body {
+  padding-top: 51px;
+  padding-bottom: 40px;
+}
+/* offset scroll position for anchor links (for fixed navbar)  */
+.section h1 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+
+.section h2 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h3 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h4 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h5 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+.section h6 {
+  padding-top: 56px;
+  margin-top: -56px;
+}
+</style>
+
+<script>
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark it active
+  menuAnchor.parent().addClass('active');
+
+  // if it's got a parent navbar menu mark it active as well
+  menuAnchor.closest('li.dropdown').addClass('active');
+});
+</script>
+
+
+<div class="container-fluid main-container">
+
+<!-- tabsets -->
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+</script>
+
+<!-- code folding -->
+
+
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Home</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+  <a href="https://data.cityofnewyork.us/City-Government/NYC-Jobs/kpav-sd4t/data">data</a>
+</li>
+<li>
+  <a href="https://github.com/xuqingsally/p8105-final-project">
+    <span class="fa fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div class="fluid-row" id="header">
+
+
+
+<h1 class="title toc-ignore">Find a proper job in NYC – Job analysis of NYC</h1>
+
+</div>
+
+
+<div id="member" class="section level1">
+<h1>Member:</h1>
+<p>Huilin Zhou (hz2507)<br />
+Zhuo Li (zl2637)<br />
+Qing Xu (qx2178)<br />
+Zhaoyu Liu (zl2638)</p>
+<p>The github link is:<a href="https://github.com/xuqingsally/p8105-final-project" class="uri">https://github.com/xuqingsally/p8105-final-project</a></p>
+</div>
+<div id="motivation" class="section level1">
+<h1>Motivation:</h1>
+<p>Many of us will find a job in recent years. In New York City government area, what type of jobs can be payed for higher salary? If that’s the ideal job for me , what skills should I have before applying for it? Also where should I rent an apartment if I want to live close to that type of positions? By looking at the NYC jobs data set from 2013 to 2017,we wish to give some advice on job catrgories, required skills and salary range for people who are seeking for a job.</p>
+</div>
+<div id="initial-questions" class="section level1">
+<h1>Initial questions:</h1>
+<p>We are trying to analyze the NYC government jobs based on the salary, the requirement of the degree, locations, job type and also required skills to provide people with a viewable results to let them find the potential suitable job.<br />
+We did the research on the question like where to find a suitable job with the highest salary. What’s the highest base salary job in need of specific education degree?</p>
+<p>While doing the analysis of the dataset and making the visualization plots, we started to think about making the wordcount to analyze the preferred skills in different job category to better find out the potential suitable job for different people. Besides, we made the bar chart to find out the number of positions for each job category in each year from 2013 to 2017, and we found out the number of job positions in each category keeps increasing, which give us better evidence to research on the question of finding suitable jobs.</p>
+<p>After analysizing job information among the data set,we will consider linearity regression model to test the association between base salary and the level of the position in the analysis. Also we want to know whether these conclusions can be generalized to other cities.</p>
+</div>
+<div id="data" class="section level1">
+<h1>Data:</h1>
+<p>Source: <a href="https://data.cityofnewyork.us/City-Government/NYC-Jobs/kpav-sd4t/data" class="uri">https://data.cityofnewyork.us/City-Government/NYC-Jobs/kpav-sd4t/data</a><br />
+Scrape:We downloaded the data set from the website and the original data set contains 3174 job information. We selected data with information about work location, job category, preferred skills and full/part time. We want to use Google Map to get longtitute and latitute from work locations. Since the Google map has a limit of 2500 observation one time, we selected first 2500 observations from the data set.<br />
+Cleaning:<br />
+1. Merge job category if they are the same kind but just have different names. Finally we got 12 kinds of job categories.<br />
+2. Unify salary unit to “Annual” and recalculated the salary range and average salary.<br />
+3. Use Google Map to change location to longitute and latitute.<br />
+4. Since Google map has limitation, we wrote a new data set after cleaning it and use it in the after analysize.</p>
+</div>
+<div id="additional-analysis" class="section level1">
+<h1>Additional analysis:</h1>
+<p>Linear regression analysis</p>
+</div>
+<div id="discussion" class="section level1">
+<h1>Discussion:</h1>
+<p>There are more job positions located at prosperous places and downtown. It makes sense that companies and departments always located in downtown.<br />
+We found that for base salary of jobs required for at least master degree, engineering has the highest median base salary, for base salary of jobs required for baccalaureate degree, technology has the highest median base salary, and for base salary without requirement of degree, the median base salary and the overall base salary of Engineering are all pretty high compared with other job categories.<br />
+From 2013 to 2017, the number of job positions in each category keeps increasing. And in 2017 all categories have a dramatically increase in job positions. This might because there are more positions needed in government during recent year. Engineering positions has greatest increasing between 2016 to 2017,and job in health has great increasing between 2015 to 2016. We may predict that there will be great needed for talents in health and engineering area. While jobs in maintance has decrease between 2013 to 2014. Maybe this is because of the development of technology, fewer manpower is needed in maintance.<br />
+“Experience” is the top popular word in both preferred skills and requirements. It is important for people who want a job to get prepared. We may do some internship or related project to make us more competitive. Other top words in preferred skills are “written”,“project” and “team” . Employers always preferred candidates with strong skills especially written skills and team work.In requirements, “school” appears frequently. We may infer that education background is also important.<br />
+Also, there exsists a linear regression between base salary and civil sevice title level, higher salary could be gained with higher level started.</p>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
