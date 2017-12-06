@@ -5,7 +5,7 @@ navbar:
   right:
     - icon: fa-github fa-lg
       href: https://github.com/xuqingsally/p8105-final-project
-    - text: data
+    - text: "data"
       href: https://data.cityofnewyork.us/City-Government/NYC-Jobs/kpav-sd4t/data
 output:
   html_document
