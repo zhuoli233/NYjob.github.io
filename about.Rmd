@@ -1,0 +1,8 @@
+---
+title: "About"
+output: html_document
+---
+
+### About this site
+
+This website was made by R Markdown. Contributers are Zhaoyu Liu, Qing Xu, Zhuo Li, Huilin Zhou, who are graduate students in Biostatistics, Columbia University. 
