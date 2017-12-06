@@ -3,12 +3,16 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
+    - text: "Dashboard"
+      href: 
     - text: "Shiny"
       href: https://zhuoli233.shinyapps.io/shiny/
-    - text: "data"
-      href: https://data.cityofnewyork.us/City-Government/NYC-Jobs/kpav-sd4t/data 
-      text: "About"
+    - text: "Discussion"
+      href: discussion.html
+    - text: "About"
       href: about.html
+    - text: "Data"
+      href: https://data.cityofnewyork.us/City-Government/NYC-Jobs/kpav-sd4t/data 
     - icon: fa-github fa-lg
       href: https://github.com/xuqingsally/p8105-final-project
 output:

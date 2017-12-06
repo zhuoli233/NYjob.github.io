@@ -1,8 +1,12 @@
 ---
-title: "About"
+title: "Know more about us"
 output: html_document
 ---
+#Group member
+Huilin Zhou (hz2507)  
+Zhuo Li (zl2637)  
+Qing Xu (qx2178)  
+Zhaoyu Liu (zl2638) 
 
-### About this site
+#What challenge did we meet?
 
-This website was made by R Markdown. Contributers are Zhaoyu Liu, Qing Xu, Zhuo Li, Huilin Zhou, who are graduate students in Biostatistics, Columbia University. 
