@@ -179,7 +179,9 @@ $(document).ready(function () {
         
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown-header">Dashboard</li>
+        <li>
+  <a href="dashboard.html">Analysis</a>
+</li>
 <li>
   <a href="https://zhuoli233.shinyapps.io/shiny/">Shiny</a>
 </li>
@@ -212,15 +214,19 @@ $(document).ready(function () {
 </div>
 
 
-<div id="group-member" class="section level1">
-<h1>Group member</h1>
+<div id="group-members" class="section level2">
+<h2>Group members</h2>
 <p>Huilin Zhou (hz2507)<br />
 Zhuo Li (zl2637)<br />
 Qing Xu (qx2178)<br />
 Zhaoyu Liu (zl2638)</p>
 </div>
-<div id="what-challenge-did-we-meet" class="section level1">
-<h1>What challenge did we meet?</h1>
+<div id="what-challenge-did-we-meet" class="section level2">
+<h2>What challenge did we meet?</h2>
+<ol style="list-style-type: decimal">
+<li><p>First time to draw a location map by changing address into longitude and latitude. Since Google map has time limits for one day, it took us long time to get and modify data. In view of taking too much time when using shiny, we decided to write a new csv about the data set contains the longitude and latitude. The app went faster using the new data.</p></li>
+<li><p>Making word cloud is fantastic and more pretty than word count. However, it takes about ten minutes to show the word clouds in dashboard every time. We tried several ways, but we haven’t found an effective way to show a beautiful word cloud as the original one.</p></li>
+</ol>
 </div>
 
 

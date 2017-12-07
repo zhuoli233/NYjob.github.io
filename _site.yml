@@ -3,8 +3,8 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "Dashboard"
-      href: 
+    - text: "Analysis"
+      href: dashboard.html
     - text: "Shiny"
       href: https://zhuoli233.shinyapps.io/shiny/
     - text: "Discussion"
