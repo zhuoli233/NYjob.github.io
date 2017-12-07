@@ -2,7 +2,7 @@
 title: "Find a proper job in NYC -- Job analysis of NYC"
 ---
 
-<img src="image/job-hunting.jpg" style="width:95%">
+<img src="image/job-hunting.jpg" style="width:100%">
 
 #Introduction 
 Many of us will find a job in recent years. In New York City government area, what type of jobs can be payed for higher salary? If that's the ideal job for me , what skills should I have before applying for it?  Also where should I rent an apartment if I want to live close to that type of positions? By looking at the NYC jobs data set from 2013 to 2017,we wish to give some advice on job catrgories, required skills and salary range for people who are seeking for a job. 
@@ -11,7 +11,7 @@ Many of us will find a job in recent years. In New York City government area, wh
 
 <img src="image/new-york.jpg" style="width:100%">
 
-#Initial questions: 
+#Initial questions 
 
 
 We are trying to analyze the NYC government jobs based on the salary, the requirement of the degree, locations, job type and also required skills to provide people with a viewable results to let them find the potential suitable job.  
@@ -30,7 +30,7 @@ Cleaning:
 4. Since Google map has limitation, we wrote a new data set after cleaning it and use it in the after analysize.    
 
 
-#Additional analysis:
+#Additional analysis
 Linear regression analysis  
 
 
