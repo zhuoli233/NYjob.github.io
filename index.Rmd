@@ -29,10 +29,7 @@ Cleaning:
 3. Use Google Map to change location to longitute and latitute.  
 4. Since Google map has limitation, we wrote a new data set after cleaning it and use it in the after analysize.    
 
-
-#Additional analysis
-Linear regression analysis  
-
+ 
 
 <img src="image/new-york-map-183363191-5824e1743df78c6f6a591970.jpg" style="width:60%">
 
