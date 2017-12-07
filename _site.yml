@@ -3,9 +3,9 @@ output_dir: "."
 navbar:
   title: "Home"
   right:
-    - text: "Dashboard"
-      icon: fa-columns
-      href: 
+    - text: "Analysis"
+      icon: fa-bar-chart
+      href: dashboard.html
     - text: "Shiny"
       icon: fa-area-chart
       href: https://zhuoli233.shinyapps.io/shiny/
@@ -13,7 +13,7 @@ navbar:
       icon: fa-file-text
       href: discussion.html
     - text: "About"
-      icon: fa-info
+      icon: fa-info-circle
       href: about.html
     - text: "Data"
       icon: fa-external-link
