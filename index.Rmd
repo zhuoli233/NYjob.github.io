@@ -20,9 +20,4 @@ Cleaning:
 2. Unify salary unit to "Annual" and recalculated the salary range and average salary.   
 3. Use Google Map to change location to longitute and latitute.  
 4. Since Google map has limitation, we wrote a new data set after cleaning it and use it in the after analysize.    
-  
- 
-#Linear regression analysis:
-
-
 
