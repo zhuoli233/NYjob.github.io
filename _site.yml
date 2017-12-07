@@ -15,6 +15,9 @@ navbar:
     - text: "About"
       icon: fa-info-circle
       href: about.html
+    - text: "Appendix"
+      icon: fa-file
+      href: Appendix.html
     - text: "Data"
       icon: fa-external-link
       href: https://data.cityofnewyork.us/City-Government/NYC-Jobs/kpav-sd4t/data 

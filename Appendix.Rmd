@@ -1,0 +1,57 @@
+---
+output: 
+   html_document:
+     code_folding: hide
+---
+#Appendix
+##Word Cloud Plots
+
+For that wordcloud plots from package "wordcloud2" could not be shown in flexdashborad, we add the plots at Appendix.
+```{r collapse=TRUE,include=FALSE}
+#change class of the variables
+library(tidyverse)
+library(wordcloud2)
+library(tidytext)
+library(forcats)
+library(viridis)
+library(ggplot2)
+ 
+nyc_jobs=read_csv("job.csv")
+nyc_jobs = nyc_jobs%>% 
+  ungroup()%>%
+  mutate(minimum_qual_requirements = as.character(minimum_qual_requirements))%>%
+  mutate(preferred_skills = as.character(preferred_skills))
+
+#seperate into words and count the word
+jobs_words_skill =  nyc_jobs%>%
+  unnest_tokens(word,preferred_skills)%>%
+  anti_join(stop_words)%>%
+  inner_join(., parts_of_speech) %>%
+  count(word, sort = TRUE)
+jobs_words_requirement =  nyc_jobs%>%
+  unnest_tokens(word,minimum_qual_requirements)%>%
+  anti_join(stop_words)%>%
+  inner_join(., parts_of_speech) %>%
+  count(word, sort = TRUE)
+ 
+```
+
+  
+
+### Word Cloud of Preferred Skills
+```{r collapse=TRUE}
+set.seed(123)
+wordcloud2(jobs_words_skill, size = 2,color = 'random-light',  
+           backgroundColor = "gray", fontWeight='bold',  
+           minRotation = -pi/3, maxRotation = pi/3,rotateRatio = 0.8)  
+```
+
+ 
+
+### Word Cloud of Minimum Qual Requirements
+```{r collapse=TRUE}
+set.seed(123)
+wordcloud2(jobs_words_requirement, size = 2,color = 'random-light',  
+           backgroundColor = "gray", fontWeight='bold',  
+           minRotation = -pi/3, maxRotation = pi/3,rotateRatio = 0.8)  
+```
