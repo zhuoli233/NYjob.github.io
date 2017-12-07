@@ -1,7 +1,8 @@
 ---
-title: "Know more about us"
 output: html_document
 ---
+<img src="image/DS.jpeg" style="width:10%">
+
 ##Group members
 Huilin Zhou (hz2507)  
 Zhuo Li (zl2637)  
