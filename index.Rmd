@@ -5,6 +5,7 @@ title: "Find a proper job in NYC -- Job analysis of NYC"
 <img src="image/job-hunting.jpg" style="width:100%">
 
 #Introduction 
+
 Almost all of us are going to find a job in recent years, and some of people may be interested in finding a job in New York City government. Therefore, there must be many questions to be explored. For example, in New York City government area, what type of jobs can be payed for higher salary? If that's the ideal job for me, what skills should I have before applying for it?  Also where should I rent an apartment if I want to live close to that type of positions? By looking at the NYC jobs data set from 2013 to 2017, we wish to give some advice on job catrgories, required skills and salary range for people who are seeking for a job. 
 
 
@@ -22,12 +23,13 @@ While doing the analysis of the dataset and making the visualization plots, we s
 After analysizing job information among the data set, we will consider linearity regression model to test the association between base salary and the level of the position in the analysis. Also we want to know whether these conclusions can be generalized to other cities.  
   
 #Data
+
 Scrape:We downloaded the data set from the website and the original data set contains 3174 job information. We selected data with information about work location, job category, preferred skills and full/part time. We want to use Google Map to get longtitute and latitute from work locations. Since the Google map has a limit of 2500 observation one time, we selected first 2500 observations from the data set.  
 Cleaning:  
-1. Merge job category if they are the same kind but just have different names. Finally we got 12 kinds of job categories.    
-2. Unify salary unit to "Annual" and recalculated the salary range and average salary.   
-3. Use Google Map to change location to longitute and latitute.  
-4. Since Google map has limitation, we wrote a new data set after cleaning it and use it in the after analysize.    
+1.Merge job category if they are the same kind but just have different names. Finally we got 12 kinds of job categories.    
+2.Unify salary unit to "Annual" and recalculated the salary range and average salary.   
+3.Use Google Map to change location to longitute and latitute.  
+4.Since Google map has limitation, we wrote a new data set after cleaning it and use it in the after analysize.    
 
  
 

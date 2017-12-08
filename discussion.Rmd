@@ -2,9 +2,10 @@
 output: html_document
 ---
 
-<img src="image/job_icon2.png" style="width:10%">
+<img src="image/job_icon2.png" style="width:10%"> 
 
 ##Discussion
+
 There are more job positions located at prosperous places and downtown. It makes sense that companies and departments always located in downtown.  
 We found that for base salary of jobs required for at least master degree, engineering has the highest median base salary, for base salary of jobs required for baccalaureate degree, technology has the highest median base salary, and for base salary without requirement of degree, the median base salary and the overall base salary of Engineering are all pretty high compared with other job categories.   
 From 2013 to 2017, the number of job positions in each category keeps increasing. And in 2017, all categories have a dramatic increase in job positions. This might be because there are more positions needed in government during the recent year.  Engineering positions have greatest increasing between 2016 to 2017, and job in health has greatly increased between 2015 to 2016. We may predict that there will be greatly needed for talents in health and engineering area. While jobs in maintenance have decreased between 2013 to 2014. Maybe this is because of the development of technology, fewer manpower is needed for maintenance.  
@@ -13,6 +14,7 @@ There is still some limitation of the analysis. Since the restriction of the sou
 
 
 ##Suggestion
+
 1. People with higher educational backgrounds could have a high base salary in engineering and technology area in most cases. Also people in these two job categories have the highest average salary. If you are interested in these areas, higher degree is recommended.   
 2. The number of positions is increasing during these years, especially in health and engineering area. If you want to find a job, you will have more opportunity in these areas if you have the corresponding background.   
 3. Most jobs preferred related experience and strong written ability. It is important to develop written skills and build more related experience in order to find a good job.
