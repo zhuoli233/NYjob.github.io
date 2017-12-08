@@ -9,6 +9,11 @@ Zhuo Li (zl2637)
 Qing Xu (qx2178)  
 Zhaoyu Liu (zl2638) 
 
+##Github repository
+The Github repository for the whole project is https://github.com/xuqingsally/p8105-final-project.
+
+The Github repository for this website is https://github.com/zhuoli233/NYjob.github.io.
+
 ##What challenge did we meet?
 
 1. The first challenge we met is when we first time drew the location map by changing address into longitude and latitude. Since Google map has time limits for one day, it took us long time to get and modify data. In view of taking too much time when using shiny, we decided to write a new csv of the data set containing the longitude and latitude information. After that, the app went faster using the new data.  
