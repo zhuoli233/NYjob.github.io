@@ -244,7 +244,7 @@ $(document).ready(function () {
 <p><img src="image/job-hunting.jpg" style="width:100%"></p>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
-<p>Many of us will find a job in recent years. In New York City government area, what type of jobs can be payed for higher salary? If that’s the ideal job for me , what skills should I have before applying for it? Also where should I rent an apartment if I want to live close to that type of positions? By looking at the NYC jobs data set from 2013 to 2017,we wish to give some advice on job catrgories, required skills and salary range for people who are seeking for a job.</p>
+<p>Almost all of us are going to find a job in recent years, and some of the people may be interested in finding a job in New York City government. Therefore, there must be many questions to consider. For example, in New York City government area, what type of jobs can be paid for the higher salary? If that’s the ideal job for me, what skills should I have before applying for it? Also where should I rent an apartment if I want to live close to that type of position? By looking at the NYC jobs data set from 2013 to 2017, we wish to give some advice on job categories, required skills and salary range for people who are seeking a job.</p>
 <p><img src="image/new-york.jpg" style="width:100%"></p>
 </div>
 <div id="initial-questions" class="section level1">
@@ -252,16 +252,16 @@ $(document).ready(function () {
 <p>We are trying to analyze the NYC government jobs based on the salary, the requirement of the degree, locations, job type and also required skills to provide people with a viewable results to let them find the potential suitable job.<br />
 We did the research on the question like where to find a suitable job with the highest salary. What’s the highest base salary job in need of specific education degree?</p>
 <p>While doing the analysis of the dataset and making the visualization plots, we started to think about making the wordcount to analyze the preferred skills in different job category to better find out the potential suitable job for different people. Besides, we made the bar chart to find out the number of positions for each job category in each year from 2013 to 2017, and we found out the number of job positions in each category keeps increasing, which give us better evidence to research on the question of finding suitable jobs.</p>
-<p>After analysizing job information among the data set,we will consider linearity regression model to test the association between base salary and the level of the position in the analysis. Also we want to know whether these conclusions can be generalized to other cities.</p>
+<p>After analysizing job information among the data set, we will consider linearity regression model to test the association between base salary and the level of the position in the analysis. Also we want to know whether these conclusions can be generalized to other cities.</p>
 </div>
 <div id="data" class="section level1">
 <h1>Data</h1>
-<p>Scrape:We downloaded the data set from the website and the original data set contains 3174 job information. We selected data with information about work location, job category, preferred skills and full/part time. We want to use Google Map to get longtitute and latitute from work locations. Since the Google map has a limit of 2500 observation one time, we selected first 2500 observations from the data set.<br />
+<p>Scrape:We downloaded the data set from the website and the original data set contains 3174 job information. We selected data with information about the work location, job category, preferred skills and full/part time. We want to use the Google Map to get longitude and latitude from work locations. Since the Google map has a limit of 2500 observations one time, we selected the first 2500 observations from the data set.<br />
 Cleaning:<br />
-1. Merge job category if they are the same kind but just have different names. Finally we got 12 kinds of job categories.<br />
+1. Merge job category if they are the same kind but just has different names. Finally we got 12 kinds of job categories.<br />
 2. Unify salary unit to “Annual” and recalculated the salary range and average salary.<br />
-3. Use Google Map to change location to longitute and latitute.<br />
-4. Since Google map has limitation, we wrote a new data set after cleaning it and use it in the after analysize.</p>
+3. Use Google Map to change location to longitude and latitude.<br />
+4. Since Google map has limitation, we wrote a new data set after cleaning it and use it in the after analysis.</p>
 <p><img src="image/new-york-map-183363191-5824e1743df78c6f6a591970.jpg" style="width:60%"></p>
 </div>
 
