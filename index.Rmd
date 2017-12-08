@@ -4,6 +4,10 @@ title: "Find a proper job in NYC -- Job analysis of NYC"
 
 <img src="image/job-hunting.jpg" style="width:100%">
 
+##Know our project in 2 minutes!
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yOsGwX9VR48" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
 #Introduction 
 Almost all of us are going to find a job in recent years, and some of people may be interested in finding a job in New York City government. Therefore, there must be many questions to be explored. For example, in New York City government area, what type of jobs can be payed for higher salary? If that's the ideal job for me, what skills should I have before applying for it?  Also where should I rent an apartment if I want to live close to that type of positions? By looking at the NYC jobs data set from 2013 to 2017, we wish to give some advice on job catrgories, required skills and salary range for people who are seeking for a job. 
 
